@@ -1,0 +1,1148 @@
+/* ==========================================
+   GOOGLE FONT & RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top,#1b2c5f 0%,#091122 45%,#030712 100%);
+
+}
+
+/* ==========================================
+   STARS
+========================================== */
+
+.stars{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    top:0;
+    left:0;
+
+    z-index:0;
+
+    background-image:
+
+    radial-gradient(white 1px,transparent 1px),
+
+    radial-gradient(white 1px,transparent 1px),
+
+    radial-gradient(#d8ecff 1px,transparent 1px),
+
+    radial-gradient(#fff 1.5px,transparent 1.5px);
+
+    background-size:
+    140px 140px,
+    220px 220px,
+    180px 180px,
+    300px 300px;
+
+    background-position:
+    10px 20px,
+    60px 80px,
+    100px 120px,
+    180px 40px;
+
+    animation:twinkle 8s linear infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.75;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.75;
+
+    }
+
+}
+
+/* ==========================================
+   MOON
+========================================== */
+
+.moon{
+
+    position:fixed;
+
+    top:70px;
+    right:120px;
+
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle at 35% 35%,
+    #fffef7,
+    #fff6c7 45%,
+    #f8d97d 100%);
+
+    box-shadow:
+    0 0 40px rgba(255,255,200,.8),
+    0 0 80px rgba(255,255,180,.5),
+    0 0 120px rgba(255,255,180,.25);
+
+    z-index:2;
+
+}
+
+/* Moon Craters */
+
+.crater{
+
+    position:absolute;
+
+    background:#edd796;
+
+    border-radius:50%;
+
+    opacity:.5;
+
+}
+
+.c1{
+
+    width:18px;
+    height:18px;
+
+    left:35px;
+    top:45px;
+
+}
+
+.c2{
+
+    width:12px;
+    height:12px;
+
+    right:28px;
+    top:28px;
+
+}
+
+.c3{
+
+    width:20px;
+    height:20px;
+
+    bottom:28px;
+    right:45px;
+
+}
+
+/* ==========================================
+   BALLOONS
+========================================== */
+
+.balloons{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    top:0;
+    left:0;
+
+    pointer-events:none;
+
+    z-index:3;
+
+}
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-180px;
+
+    width:70px;
+    height:90px;
+
+    border-radius:50%;
+
+    animation:float 18s linear infinite;
+
+}
+
+/* Balloon Highlight */
+
+.balloon::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:16px;
+    height:35px;
+
+    left:15px;
+    top:15px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    transform:rotate(25deg);
+
+}
+
+/* Balloon String */
+
+.balloon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+    height:90px;
+
+    background:#ddd;
+
+    left:50%;
+    top:100%;
+
+}
+
+/* Colors */
+
+.red{
+
+    background:#ff4d6d;
+
+    left:8%;
+
+}
+
+.blue{
+
+    background:#4dabf7;
+
+    left:28%;
+
+    animation-delay:3s;
+
+}
+
+.green{
+
+    background:#69db7c;
+
+    left:50%;
+
+    animation-delay:6s;
+
+}
+
+.yellow{
+
+    background:#ffd43b;
+
+    left:72%;
+
+    animation-delay:9s;
+
+}
+
+.pink{
+
+    background:#ff80bf;
+
+    left:90%;
+
+    animation-delay:12s;
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-140vh);
+
+    }
+
+}
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.container{
+
+    position:relative;
+
+    width:720px;
+
+    padding:35px 45px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    z-index:20;
+
+    margin-top:-80px;
+
+}
+
+.container h1{
+
+    font-size:54px;
+
+    color:#ffd95b;
+
+    text-shadow:
+    0 0 18px gold;
+
+    margin-bottom:8px;
+
+}
+
+.container h2{
+
+    color:white;
+
+    font-weight:500;
+
+    margin-bottom:12px;
+
+}
+
+.container p{
+
+    color:#d8d8d8;
+
+    font-size:19px;
+
+    line-height:34px;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:19px;
+
+    color:white;
+
+    background:#ff4d88;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    animation:buttonGlow 2s infinite;
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    background:#ff0066;
+
+}
+
+@keyframes buttonGlow{
+
+    0%{
+
+        box-shadow:0 0 12px #ff4d88;
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 25px #ff4d88,
+        0 0 60px #ff4d88;
+
+    }
+
+    100%{
+
+        box-shadow:0 0 12px #ff4d88;
+
+    }
+
+}
+/* ==========================================
+   SHOOTING STARS
+========================================== */
+
+.shooting-stars{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:4;
+
+}
+
+.shooting-stars span{
+
+    position:absolute;
+
+    width:180px;
+    height:3px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        to left,
+        white,
+        rgba(255,255,255,.8),
+        rgba(255,255,255,.4),
+        transparent
+    );
+
+    filter:drop-shadow(0 0 10px white);
+
+    animation:shoot 8s linear infinite;
+
+}
+
+/* 8 Shooting Stars */
+
+.shooting-stars span:nth-child(1){
+    top:6%;
+    left:105%;
+    animation-delay:0s;
+}
+
+.shooting-stars span:nth-child(2){
+    top:14%;
+    left:105%;
+    animation-delay:1.2s;
+}
+
+.shooting-stars span:nth-child(3){
+    top:22%;
+    left:105%;
+    animation-delay:2.7s;
+}
+
+.shooting-stars span:nth-child(4){
+    top:30%;
+    left:105%;
+    animation-delay:4s;
+}
+
+.shooting-stars span:nth-child(5){
+    top:10%;
+    left:105%;
+    animation-delay:5.5s;
+}
+
+.shooting-stars span:nth-child(6){
+    top:42%;
+    left:105%;
+    animation-delay:7s;
+}
+
+.shooting-stars span:nth-child(7){
+    top:18%;
+    left:105%;
+    animation-delay:8.8s;
+}
+
+.shooting-stars span:nth-child(8){
+    top:34%;
+    left:105%;
+    animation-delay:10s;
+}
+
+@keyframes shoot{
+
+    from{
+
+        transform:
+        translateX(0)
+        translateY(0)
+        rotate(135deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateX(-1700px)
+        translateY(850px)
+        rotate(135deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================
+   GIFT
+========================================== */
+
+.gift{
+
+    width:120px;
+    height:120px;
+
+    position:relative;
+
+    margin:35px auto;
+
+    cursor:pointer;
+
+    animation:giftShake 2s infinite;
+
+}
+
+.gift-box{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:120px;
+    height:90px;
+
+    background:#ff5d8f;
+
+    border-radius:12px;
+
+}
+
+.gift-lid{
+
+    position:absolute;
+
+    top:15px;
+
+    width:130px;
+    height:25px;
+
+    left:-5px;
+
+    background:#ff87ab;
+
+    border-radius:8px;
+
+    transition:.6s;
+
+}
+
+.gift-ribbon-v{
+
+    position:absolute;
+
+    width:14px;
+
+    height:120px;
+
+    background:gold;
+
+    left:53px;
+
+}
+
+.gift-ribbon-h{
+
+    position:absolute;
+
+    width:120px;
+
+    height:14px;
+
+    background:gold;
+
+    top:45px;
+
+}
+
+.openGift .gift-lid{
+
+    transform:
+    translateY(-45px)
+    rotate(-12deg);
+
+}
+
+@keyframes giftShake{
+
+    0%{
+        transform:rotate(-2deg);
+    }
+
+    50%{
+        transform:rotate(2deg);
+    }
+
+    100%{
+        transform:rotate(-2deg);
+    }
+
+}
+
+/* ==========================================
+   BIRTHDAY CAKE
+========================================== */
+
+.cake{
+
+    position:fixed;
+
+    bottom: -5px;
+
+    left:50%;
+
+    transform:
+    translateX(-50%) scale(.8);
+
+    width:180px;
+    height:180px;
+
+    z-index:12;
+
+}
+
+.layer{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border-radius:12px;
+
+}
+
+.top{
+
+    width:100px;
+    height:35px;
+
+    background:#ff9db4;
+
+    bottom:80px;
+
+}
+
+.middle{
+
+    width:130px;
+    height:40px;
+
+    background:#ff6f91;
+
+    bottom:40px;
+
+}
+
+.bottom{
+
+    width:160px;
+    height:45px;
+
+    background:#ff3d71;
+
+    bottom:0;
+
+}
+
+.candle{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:115px;
+
+    width:12px;
+    height:45px;
+
+    background:white;
+
+    border-radius:4px;
+
+}
+
+.flame{
+
+    position:absolute;
+
+    top:-16px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:16px;
+    height:24px;
+
+    background:gold;
+
+    border-radius:50%;
+
+    box-shadow:0 0 25px orange;
+
+    animation:flicker .5s infinite alternate;
+
+}
+
+@keyframes flicker{
+
+    from{
+
+        transform:
+        translateX(-50%)
+        scale(1);
+
+    }
+
+    to{
+
+        transform:
+        translateX(-50%)
+        scale(1.25);
+
+    }
+
+}
+/* ==========================================
+   HEART RAIN
+========================================== */
+
+.heart{
+
+    position:fixed;
+
+    top:-80px;
+
+    color:#ff4d88;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    text-shadow:
+    0 0 8px #ff4d88,
+    0 0 18px #ff4d88;
+
+    animation:heartFall linear forwards;
+
+}
+
+@keyframes heartFall{
+
+    0%{
+
+        transform:
+        translateY(-100px)
+        rotate(0deg)
+        scale(.5);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(120vh)
+        rotate(360deg)
+        scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================
+   CONFETTI
+========================================== */
+
+.confetti{
+
+    position:fixed;
+
+    width:10px;
+
+    height:18px;
+
+    border-radius:2px;
+
+    z-index:9998;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+   FIREWORK CANVAS
+========================================== */
+
+#fireworks{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* ==========================================
+   SHOW CAKE
+========================================== */
+
+.cake{
+
+    opacity:0;
+
+    transition:1.2s;
+
+}
+
+.showCake{
+
+    opacity:1;
+
+    transform:
+    translateX(-50%)
+    scale(1);
+
+}
+
+
+
+/* ==========================================
+   CARD ANIMATION
+========================================== */
+
+.container{
+
+    animation:cardEntry 1.5s ease;
+
+}
+
+@keyframes cardEntry{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(80px)
+        scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   MOON GLOW
+========================================== */
+
+.moon{
+
+    animation:moonGlow 5s ease-in-out infinite alternate;
+
+}
+
+@keyframes moonGlow{
+
+    from{
+
+        box-shadow:
+        0 0 35px rgba(255,255,210,.8),
+        0 0 70px rgba(255,255,210,.4);
+
+    }
+
+    to{
+
+        box-shadow:
+        0 0 55px rgba(255,255,220,1),
+        0 0 100px rgba(255,255,220,.8),
+        0 0 150px rgba(255,255,220,.4);
+
+    }
+
+}
+
+/* ==========================================
+   BALLOON SWING
+========================================== */
+
+.balloon{
+
+    transform-origin:bottom center;
+
+    animation:
+    float 18s linear infinite,
+    swing 4s ease-in-out infinite;
+
+}
+
+@keyframes swing{
+
+    0%{
+
+        rotate:-2deg;
+
+    }
+
+    50%{
+
+        rotate:2deg;
+
+    }
+
+    100%{
+
+        rotate:-2deg;
+
+    }
+
+}
+
+/* ==========================================
+   GLASS SHINE
+========================================== */
+
+.container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:140%;
+
+    top:-20%;
+
+    left:-250px;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.18),
+
+    transparent
+
+    );
+
+    transform:rotate(18deg);
+
+    animation:shine 8s infinite;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-250px;
+
+    }
+
+    to{
+
+        left:110%;
+
+    }
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff4d88;
+
+    border-radius:10px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.container{
+
+    width:92%;
+
+    padding:30px;
+
+}
+
+.container h1{
+
+    font-size:38px;
+
+}
+
+.container h2{
+
+    font-size:24px;
+
+}
+
+.container p{
+
+    font-size:17px;
+
+    line-height:30px;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+.moon{
+
+    width:90px;
+    height:90px;
+
+    right:30px;
+
+}
+
+.balloon{
+
+    width:55px;
+    height:70px;
+
+}
+
+.cake{
+
+    transform:
+    translateX(-50%)
+    scale(.7);
+
+}
+
+}
+
+/* ==========================================
+   END
+========================================== */
