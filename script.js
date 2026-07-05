@@ -68,7 +68,7 @@ function showMessage() {
 
     const msg = document.createElement("p");
     msg.id = "message";
-    msg.style.whiteSpace = "pre-line";
+   
 
     container.appendChild(msg);
 
