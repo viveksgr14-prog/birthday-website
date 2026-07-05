@@ -47,7 +47,7 @@ function typeWriter() {
 
     if (index < birthdayMessage.length) {
 
-        text.textContent += birthdayMessage.charAt(index);
+        text.innerHTML += birthdayMessage.charAt(index);
         index++;
 
         setTimeout(typeWriter, 40);
