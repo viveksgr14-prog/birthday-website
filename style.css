@@ -909,10 +909,9 @@ button:hover{
 ========================================== */
 
 .container{
-
-    animation:cardEntry 1.5s ease;
-
+    animation:none;
 }
+
 
 @keyframes cardEntry{
 
