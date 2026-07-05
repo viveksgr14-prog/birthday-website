@@ -47,8 +47,7 @@ function typeWriter() {
 
     if (index < birthdayMessage.length) {
 
-        text.innerHTML += birthdayMessage.charAt(index);
-
+        text.textContent += birthdayMessage.charAt(index);
         index++;
 
         setTimeout(typeWriter, 40);
@@ -63,20 +62,18 @@ function typeWriter() {
 
 function showMessage() {
 
-    container.innerHTML = `
+    document.getElementById("introText").style.display = "none";
+    document.getElementById("giftBox").style.display = "none";
+    document.getElementById("surpriseBtn").style.display = "none";
 
-        <h1>🎉 Happy Birthday 🎉</h1>
+    const msg = document.createElement("p");
+    msg.id = "message";
+    msg.style.whiteSpace = "pre-line";
 
-        <h2>Dear Best Friend ❤️</h2>
-
-        <p id="message"></p>
-
-    `;
+    container.appendChild(msg);
 
     index = 0;
-
     typeWriter();
-
 }
 
 // =========================================
