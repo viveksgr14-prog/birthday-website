@@ -9,7 +9,7 @@ const cake = document.querySelector(".cake");
 const container = document.querySelector(".container");
 
 const birthdayMessage = `
-🎂 Happy Birthday, VIVEK SAGAR! ❤️
+🎂 Happy Birthday, VIVEK SHANUBHAG! ❤️
 
 From the day we became friends,
 life became brighter.
